@@ -1,14 +1,18 @@
 .card {
-  background: white;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+  border-color: rgba(102, 126, 234, 0.5);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .imageContainer {
@@ -25,13 +29,14 @@
 
 .content h3 {
   margin: 0 0 0.5rem 0;
-  color: #333;
+  color: #ffffff;
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .content p {
   margin: 0 0 1rem 0;
-  color: #666;
+  color: #b0b0b0;
   line-height: 1.6;
 }
 
@@ -43,20 +48,34 @@
 }
 
 .tag {
-  background-color: #e0e7ff;
-  color: #4c51bf;
+  background: rgba(102, 126, 234, 0.2);
+  color: #a5b4fc;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.875rem;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: rgba(102, 126, 234, 0.3);
+  color: #c7d2fe;
 }
 
 .link {
-  color: #0070f3;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .link:hover {
-  color: #0051cc;
+  opacity: 0.8;
+  transform: translateX(3px);
 }
