@@ -184,6 +184,134 @@
   }
 }
 
+.socialLinks {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 10;
+  animation: fadeInLeft 1.5s ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  color: #ffffff;
+  background: rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateX(5px) scale(1.1);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.socialIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  animation: fadeInUp 2s ease-out, bounce 2s ease-in-out 2s infinite;
+  cursor: pointer;
+}
+
+.scrollDown:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: translateX(-50%) scale(1.1);
+}
+
+.scrollDown:hover .mouse {
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+.scrollDown:hover .mouseWheel {
+  background: rgba(255, 255, 255, 1);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+.mouse {
+  width: 20px;
+  height: 32px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+  transition: all 0.3s ease;
+}
+
+.mouseWheel {
+  width: 2px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  animation: scroll 1.5s infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.scrollText {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 3rem;
@@ -204,5 +332,24 @@
   
   .content {
     text-align: left;
+  }
+  
+  .scrollDown {
+    bottom: 1rem;
+  }
+  
+  .socialLinks {
+    left: 1rem;
+    gap: 1rem;
+  }
+  
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .socialIcon svg {
+    width: 18px;
+    height: 18px;
   }
 }
