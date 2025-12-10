@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
@@ -83,6 +84,7 @@ export default function Home() {
   return (
     <>
       {iconGradient}
+      <Header />
       <main>
         <Hero />
         
@@ -96,10 +98,68 @@ export default function Home() {
               <h2>About Me</h2>
             </div>
             <div className={styles.aboutContent}>
-              <p>
-                I&apos;m a passionate developer with experience in building web applications.
-                I love creating solutions that make a difference and continuously learning new technologies.
-              </p>
+              <div className={styles.aboutGrid}>
+                <div className={styles.aboutImageSection}>
+                  <div className={styles.aboutImageFrame}>
+                    <img src="/images/profile.jpg" alt="Aldrian Loberiano" />
+                  </div>
+                </div>
+                
+                <div className={styles.aboutTextSection}>
+                  <p className={styles.aboutDescription}>
+                    I&apos;m a passionate developer with experience in building web applications.
+                    I love creating solutions that make a difference and continuously learning new technologies.
+                  </p>
+                  
+                  <div className={styles.aboutInfo}>
+                    <div className={styles.infoItem}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span className={styles.infoLabel}>Age:</span>
+                      <span className={styles.infoValue}>24</span>
+                    </div>
+                    
+                    <div className={styles.infoItem}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                      <span className={styles.infoLabel}>Phone:</span>
+                      <span className={styles.infoValue}>+63 991 485 2326</span>
+                    </div>
+                    
+                    <div className={styles.infoItem}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                      <span className={styles.infoLabel}>Email:</span>
+                      <span className={styles.infoValue}>loberianorian@gmail.com</span>
+                    </div>
+                    
+                    <div className={styles.infoItem}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <span className={styles.infoLabel}>Place:</span>
+                      <span className={styles.infoValue}>Calauan, Laguna,  Philippines</span>
+                    </div>
+                    
+                    <div className={styles.infoItem}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                      </svg>
+                      <span className={styles.infoLabel}>Education:</span>
+                      <span className={styles.infoValue}>Bachelor of Science in Information Technology</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className={styles.aboutActions}>
               <a href="/resume.pdf" download className={styles.resumeBtn}>
@@ -206,32 +266,940 @@ export default function Home() {
                 <polyline points="16 18 22 12 16 6"></polyline>
                 <polyline points="8 6 2 12 8 18"></polyline>
               </svg>
-              <h2>Skills</h2>
+              <h2>Technologies & Tools</h2>
             </div>
             <div className={styles.skillsGrid}>
               <div className={styles.skillCategory}>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
                 <h3>Frontend</h3>
-                <ul>
-                  <li>React / Next.js</li>
-                  <li>TypeScript</li>
-                  <li>HTML / CSS</li>
-                </ul>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>⚛️</div>
+                      <span className={styles.skillName}>React / Next.js</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🟢</div>
+                      <span className={styles.skillName}>Vue.js</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🅰️</div>
+                      <span className={styles.skillName}>Angular</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>75%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🟩</div>
+                      <span className={styles.skillName}>Nuxt.js</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📘</div>
+                      <span className={styles.skillName}>TypeScript</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🎨</div>
+                      <span className={styles.skillName}>HTML / CSS</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '95%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>95%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>💨</div>
+                      <span className={styles.skillName}>Tailwind CSS</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>88%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🅱️</div>
+                      <span className={styles.skillName}>Bootstrap</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>⚡</div>
+                      <span className={styles.skillName}>Vite</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>💲</div>
+                      <span className={styles.skillName}>jQuery</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                </div>
               </div>
+              
               <div className={styles.skillCategory}>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                  </svg>
+                </div>
                 <h3>Backend</h3>
-                <ul>
-                  <li>Node.js</li>
-                  <li>Python</li>
-                  <li>Databases</li>
-                </ul>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🟢</div>
+                      <span className={styles.skillName}>Node.js</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🚂</div>
+                      <span className={styles.skillName}>Express.js</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>88%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🦅</div>
+                      <span className={styles.skillName}>NestJS</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🐍</div>
+                      <span className={styles.skillName}>Django</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🧪</div>
+                      <span className={styles.skillName}>Flask</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🎼</div>
+                      <span className={styles.skillName}>Laravel</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🍃</div>
+                      <span className={styles.skillName}>Spring Boot</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>75%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🔷</div>
+                      <span className={styles.skillName}>ASP.NET Core</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                </div>
               </div>
+              
               <div className={styles.skillCategory}>
-                <h3>Tools</h3>
-                <ul>
-                  <li>Git</li>
-                  <li>Docker</li>
-                  <li>AWS</li>
-                </ul>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                  </svg>
+                </div>
+                <h3>Infrastructure & Databases</h3>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🐬</div>
+                      <span className={styles.skillName}>MySQL</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🐘</div>
+                      <span className={styles.skillName}>PostgreSQL</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🗃️</div>
+                      <span className={styles.skillName}>SQLite</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🔷</div>
+                      <span className={styles.skillName}>Microsoft SQL Server</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className={styles.skillCategory}>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  </svg>
+                </div>
+                <h3>Cloud Platforms & Services</h3>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🔷</div>
+                      <span className={styles.skillName}>Microsoft Azure</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>☁️</div>
+                      <span className={styles.skillName}>Google Cloud Platform</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🔥</div>
+                      <span className={styles.skillName}>Firebase</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>▲</div>
+                      <span className={styles.skillName}>Vercel</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>88%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🌐</div>
+                      <span className={styles.skillName}>Hostinger</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📛</div>
+                      <span className={styles.skillName}>Name.com</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>75%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>💰</div>
+                      <span className={styles.skillName}>Namecheap</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>75%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className={styles.skillCategory}>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <circle cx="12" cy="12" r="4"></circle>
+                  </svg>
+                </div>
+                <h3>AI, Machine Learning & Data Science</h3>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🧠</div>
+                      <span className={styles.skillName}>TensorFlow</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🔥</div>
+                      <span className={styles.skillName}>PyTorch</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>👁️</div>
+                      <span className={styles.skillName}>OpenCV</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📓</div>
+                      <span className={styles.skillName}>Jupyter Notebook</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🤖</div>
+                      <span className={styles.skillName}>OpenAI API</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🔮</div>
+                      <span className={styles.skillName}>Google AI APIs</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📊</div>
+                      <span className={styles.skillName}>Google Colab</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>88%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className={styles.skillCategory}>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                    <path d="M14 6h4"></path>
+                    <path d="M14 18h4"></path>
+                  </svg>
+                </div>
+                <h3>IoT & Embedded Systems</h3>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🤖</div>
+                      <span className={styles.skillName}>Arduino</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📡</div>
+                      <span className={styles.skillName}>ESP32</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>💻</div>
+                      <span className={styles.skillName}>Arduino IDE</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>88%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>⚙️</div>
+                      <span className={styles.skillName}>PlatformIO</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📱</div>
+                      <span className={styles.skillName}>Blynk</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📊</div>
+                      <span className={styles.skillName}>ThingsBoard</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>75%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>☁️</div>
+                      <span className={styles.skillName}>Google Cloud IoT</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '72%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>72%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🔌</div>
+                      <span className={styles.skillName}>Circuit Designer</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🧪</div>
+                      <span className={styles.skillName}>Wokwi</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className={styles.skillCategory}>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                  </svg>
+                </div>
+                <h3>Design & Prototyping</h3>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🎨</div>
+                      <span className={styles.skillName}>Canva</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🎯</div>
+                      <span className={styles.skillName}>Figma</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📷</div>
+                      <span className={styles.skillName}>Adobe Photoshop</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>✏️</div>
+                      <span className={styles.skillName}>Adobe Illustrator</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className={styles.skillCategory}>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <h3>Collaboration & Project Management</h3>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🐙</div>
+                      <span className={styles.skillName}>GitHub</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🦊</div>
+                      <span className={styles.skillName}>GitLab</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>👥</div>
+                      <span className={styles.skillName}>Microsoft Teams</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>88%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📝</div>
+                      <span className={styles.skillName}>Notion</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>💬</div>
+                      <span className={styles.skillName}>Slack</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className={styles.skillCategory}>
+                <div className={styles.categoryIcon}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 1v6m0 6v6m5.2-14.2l-4.2 4.2m-2 2l-4.2 4.2m14.2-.8l-6-6m-6-6l-6 6m20.2 5.2l-4.2-4.2m-2-2l-4.2-4.2"></path>
+                  </svg>
+                </div>
+                <h3>Miscellaneous Tools & Utilities</h3>
+                <div className={styles.skillsList}>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📦</div>
+                      <span className={styles.skillName}>NPM</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🧶</div>
+                      <span className={styles.skillName}>Yarn</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🎼</div>
+                      <span className={styles.skillName}>Composer</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>88%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🐍</div>
+                      <span className={styles.skillName}>Pip</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>💻</div>
+                      <span className={styles.skillName}>VS Code</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '95%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>95%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🌐</div>
+                      <span className={styles.skillName}>NetBeans</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>75%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🤖</div>
+                      <span className={styles.skillName}>Android Studio</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🐍</div>
+                      <span className={styles.skillName}>PyCharm</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🌙</div>
+                      <span className={styles.skillName}>Eclipse</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>75%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📮</div>
+                      <span className={styles.skillName}>Postman</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>💡</div>
+                      <span className={styles.skillName}>IntelliJ IDEA</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🌊</div>
+                      <span className={styles.skillName}>WebStorm</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>📝</div>
+                      <span className={styles.skillName}>Sublime Text</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>85%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>⚛️</div>
+                      <span className={styles.skillName}>Atom</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>80%</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

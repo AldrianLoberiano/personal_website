@@ -1,13 +1,11 @@
 'use client';
 
 import React from 'react';
-import Header from './Header';
 import styles from './Hero.module.css';
 
 export default function Hero() {
   return (
     <section id="home" className={styles.hero}>
-      <Header />
       <div className={styles.backgroundGradient}></div>
       <div className={styles.content}>
         <div className={styles.textContent}>
