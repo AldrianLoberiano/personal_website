@@ -18,18 +18,18 @@ export default function Home() {
   );
   const projects = [
     {
-      title: "Project One",
-      description: "A brief description of your first project and what it does.",
-      tags: ["Next.js", "TypeScript", "React"],
-      link: "https://github.com/yourusername/project1",
-      image: "/images/project1.jpg"
+      title: "Barangay Appointment System",
+      description: "A comprehensive PHP-based appointment management system for barangay offices.",
+      tags: ["PHP", "MySQL"],
+      link: "https://github.com/AldrianLoberiano/sto_tomas_appointment_system",
+      image: "/images/project1.png"
     },
     {
-      title: "Project Two",
-      description: "A brief description of your second project and its features.",
-      tags: ["React", "Node.js", "MongoDB"],
-      link: "https://github.com/yourusername/project2",
-      image: "/images/project2.jpg"
+      title: "Smart Fruit Detection",
+      description: "A modern dark-themed UI with glowing neon-green accents designed for Smart Fruit Detection, showcasing AI-powered features like real-time detection, accurate counting, and visual analytics. The clean layout and vibrant highlights create a futuristic and user-friendly experience.",
+      tags: ["Django", "OpenCV", "MySQL", "TensorFlow"],
+      link: "https://github.com/AldrianLoberiano/website",
+      image: "/images/project2.png"
     },
     {
       title: "Project Three",

@@ -15,7 +15,13 @@ export default function ProjectCard({ title, description, tags, link, image }: P
     <div className={styles.card}>
       {image && (
         <div className={styles.imageContainer}>
-          <Image src={image} alt={title} fill style={{ objectFit: 'cover' }} />
+          <Image 
+            src={image} 
+            alt={title} 
+            fill 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            style={{ objectFit: 'cover' }} 
+          />
         </div>
       )}
       <div className={styles.content}>
