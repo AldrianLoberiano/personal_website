@@ -14,11 +14,10 @@ export default function Hero() {
             <span className={styles.name}>Aldrian Loberiano</span>
           </h1>
           <p className={styles.subtitle}>
-            <span className={styles.highlight}>Full Stack Developer</span> <span className={styles.divider}>|</span> Designer <span className={styles.divider}>|</span> Creator
+            <span className={styles.highlight}>Full Stack Developer</span> <span className={styles.divider}>|</span> System Administrator <span className={styles.divider}>|</span> Network Engineer
           </p>
           <p className={styles.description}>
-            Crafting exceptional digital experiences with cutting-edge technology.
-            Transforming ideas into elegant, scalable solutions.
+            I am a versatile IT professional with experience in full-stack development, system administration, and network engineering. I build and maintain complete web applications, configure and secure IT systems, and ensure reliable network connectivity across the organization. My skills allow me to troubleshoot technical issues, optimize infrastructure performance, and deliver efficient digital solutions from front-end development to backend services and network operations.
           </p>
           <div className={styles.buttons}>
           <a href="#projects" className={styles.primaryBtn}>

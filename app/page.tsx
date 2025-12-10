@@ -73,11 +73,11 @@ export default function Home() {
       image: "/images/project2.png"
     },
     {
-      title: "Project Three",
-      description: "A brief description of your third project and its impact.",
-      tags: ["Python", "Flask", "PostgreSQL"],
-      link: "https://github.com/yourusername/project3",
-      image: "/images/project3.jpg"
+      title: "Coffee Shop POS",
+      description: "A lightweight Point of Sale authentication system built with PHP and MySQL for small coffee shop operations. It includes secure user registration, password-protected login, session management, and role-based dashboards for Admin, Barista, and Cashier. Designed for quick deployment using XAMPP, it uses prepared statements and password hashing for improved security. Perfect starter module for expanding into a full POS application with inventory, sales, and reporting features.",
+      tags: ["PHP", "CSS", "MySQL"],
+      link: "https://github.com/AldrianLoberiano/POS",
+      image: "/images/project3.png"
     }
   ];
 
@@ -87,6 +87,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <hr className={styles.sectionDivider} />
         
         <section id="about" className={styles.section}>
           <div className={styles.container}>
@@ -107,8 +108,7 @@ export default function Home() {
                 
                 <div className={styles.aboutTextSection}>
                   <p className={styles.aboutDescription}>
-                    I&apos;m a passionate developer with experience in building web applications.
-                    I love creating solutions that make a difference and continuously learning new technologies.
+                    Hi! I’m a versatile IT professional skilled in full-stack development, system administration, and network engineering. I build end-to-end web solutions, maintain reliable IT infrastructure, and troubleshoot technical issues to keep operations running smoothly. Passionate about innovation, I leverage new technologies to enhance performance, strengthen security, and simplify workflows.
                   </p>
                   
                   <div className={styles.aboutInfo}>
@@ -179,6 +179,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <hr className={styles.sectionDivider} />
 
         <section id="projects" className={styles.section}>
           <div className={styles.container}>
@@ -195,6 +196,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <hr className={styles.sectionDivider} />
 
         <section id="stats" className={styles.statsSection}>
           <div className={styles.container}>
@@ -258,6 +260,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <hr className={styles.sectionDivider} />
 
         <section id="skills" className={styles.section}>
           <div className={styles.container}>
@@ -1204,6 +1207,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <hr className={styles.sectionDivider} />
 
         <section id="contact" className={styles.section}>
           <div className={styles.container}>
@@ -1216,7 +1220,42 @@ export default function Home() {
             </div>
             <p>Feel free to reach out if you want to collaborate or just chat!</p>
             
-            <form className={styles.contactForm}>
+            <div className={styles.contactWrapper}>
+              <div className={styles.contactInfo}>
+                <div className={styles.contactCard}>
+                  <div className={styles.contactCardIcon}>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <h3>Email</h3>
+                  <a href="mailto:loberianorian@gmail.com">loberianorian@gmail.com</a>
+                </div>
+
+                <div className={styles.contactCard}>
+                  <div className={styles.contactCardIcon}>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <h3>Phone</h3>
+                  <a href="tel:+639914852326">+63 991 485 2326</a>
+                </div>
+
+                <div className={styles.contactCard}>
+                  <div className={styles.contactCardIcon}>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <h3>Location</h3>
+                  <p>Calauan, Laguna, Philippines</p>
+                </div>
+              </div>
+
+              <form className={styles.contactForm}>
               <div className={styles.formGroup}>
                 <label htmlFor="name">Name</label>
                 <input 
@@ -1269,6 +1308,7 @@ export default function Home() {
                 </svg>
               </button>
             </form>
+            </div>
           </div>
         </section>
       </main>
