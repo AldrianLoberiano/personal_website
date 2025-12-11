@@ -1101,3 +1101,10 @@
     font-size: 0.9rem;
   }
 }
+
+/* Hidden sections */
+#projects,
+#skills,
+#contact {
+  display: none;
+}

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -18,9 +19,9 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <a href="/">
+          <Link href="/">
             <span className={styles.logoText}>drian.dev</span>
-          </a>
+          </Link>
         </div>
         
         <button 
@@ -34,11 +35,11 @@ export default function Header() {
         </button>
 
         <ul className={`${styles.navLinks} ${isMenuOpen ? styles.open : ''}`}>
-          <li><a href="#home" onClick={closeMenu}>Home</a></li>
-          <li><a href="#about" onClick={closeMenu}>About</a></li>
-          <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-          <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+          <li><Link href="#home" onClick={closeMenu}>Home</Link></li>
+          <li><Link href="#about" onClick={closeMenu}>About</Link></li>
+          <li><Link href="#projects" onClick={closeMenu}>Projects</Link></li>
+          <li><Link href="#skills" onClick={closeMenu}>Skills</Link></li>
+          <li><Link href="#contact" onClick={closeMenu}>Contact</Link></li>
         </ul>
       </nav>
     </header>
