@@ -112,6 +112,7 @@
   color: #b0b0b0;
   max-width: 700px;
   animation: fadeInUp 1.2s ease-out;
+  text-align: justify;
 }
 
 .buttons {

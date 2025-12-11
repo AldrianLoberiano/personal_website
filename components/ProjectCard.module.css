@@ -27,6 +27,20 @@
   padding: 1.5rem;
 }
 
+.category {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+}
+
 .content h3 {
   margin: 0 0 0.5rem 0;
   color: #ffffff;

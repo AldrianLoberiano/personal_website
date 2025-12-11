@@ -9,6 +9,7 @@ import styles from './page.module.css';
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,29 +58,64 @@ export default function Home() {
       </defs>
     </svg>
   );
+
+  const categories = [
+    'All',
+    'Web Application',
+    'Mobile Application',
+    'Desktop Application',
+    'E-commerce',
+    'Government',
+    'Healthcare',
+    'Educational Platform',
+    'Tourism',
+    'Business Management',
+    'Business Directory',
+    'Service Management',
+    'POS System',
+    'AI Assistant',
+    'IoT',
+    'Cisco Projects'
+  ];
+
   const projects = [
     {
       title: "Barangay Appointment System",
-      description: "A comprehensive PHP-based appointment management system for barangay offices.",
-      tags: ["PHP", "MySQL"],
+      description: "A comprehensive PHP-based appointment management system for barangay offices. Features include online booking, queue management, and real-time notifications for citizens and staff.",
+      tags: ["PHP", "MySQL", "Bootstrap"],
+      category: "Government",
       link: "https://github.com/AldrianLoberiano/sto_tomas_appointment_system",
       image: "/images/project1.png"
     },
     {
       title: "Smart Fruit Detection",
-      description: "A modern dark-themed UI with glowing neon-green accents designed for Smart Fruit Detection, showcasing AI-powered features like real-time detection, accurate counting, and visual analytics. The clean layout and vibrant highlights create a futuristic and user-friendly experience.",
+      description: "AI-powered computer vision system for real-time fruit detection and counting. Features a modern dark-themed UI with neon-green accents, accurate detection algorithms, and visual analytics dashboard.",
       tags: ["Django", "OpenCV", "MySQL", "TensorFlow"],
+      category: "AI Assistant",
       link: "https://github.com/AldrianLoberiano/website",
       image: "/images/project2.png"
     },
     {
       title: "Coffee Shop POS",
-      description: "A lightweight Point of Sale authentication system built with PHP and MySQL for small coffee shop operations. It includes secure user registration, password-protected login, session management, and role-based dashboards for Admin, Barista, and Cashier. Designed for quick deployment using XAMPP, it uses prepared statements and password hashing for improved security. Perfect starter module for expanding into a full POS application with inventory, sales, and reporting features.",
+      description: "Lightweight Point of Sale system with secure authentication, role-based access control for Admin, Barista, and Cashier. Includes inventory tracking, sales reporting, and transaction management.",
       tags: ["PHP", "CSS", "MySQL"],
+      category: "POS System",
       link: "https://github.com/AldrianLoberiano/POS",
       image: "/images/project3.png"
+    },
+    {
+      title: "Gas and Smoke Detection with IoT Integration system",
+      description: "A safety monitoring system designed to detect gas leaks and smoke levels using IoT-enabled sensors. When hazardous levels are detected, the system automatically triggers alerts and activates safety mechanisms such as alarms, exhaust fans, or notifications. Built to demonstrate real-time environmental monitoring, automation, and smart IoT integration for enhanced safety and prevention.",
+      tags: ["C++", "Arduino", "IoT"],
+      category: "IoT",
+      link: "https://github.com/AldrianLoberiano/gas_and_smoke_with_IoT",
+      image: "/images/project4.jpg"
     }
   ];
+
+  const filteredProjects = selectedCategory === 'All' 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory);
 
   return (
     <>
@@ -87,7 +123,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <hr className={styles.sectionDivider} />
         
         <section id="about" className={styles.section}>
           <div className={styles.container}>
@@ -187,10 +222,24 @@ export default function Home() {
               <svg className={styles.sectionIcon} width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
               </svg>
-              <h2>Projects</h2>
+              <h2>My Projects</h2>
             </div>
+            <p className={styles.sectionDescription}>Explore my portfolio of innovative solutions across government, AI, and business applications. Each project showcases my expertise in building scalable, user-centric systems.</p>
+            
+            <div className={styles.projectFilters}>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  className={`${styles.filterBtn} ${selectedCategory === category ? styles.active : ''}`}
+                  onClick={() => setSelectedCategory(category)}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
             <div className={styles.projectGrid}>
-              {projects.map((project, index) => (
+              {filteredProjects.map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}
             </div>
@@ -271,6 +320,7 @@ export default function Home() {
               </svg>
               <h2>Technologies & Tools</h2>
             </div>
+            <p className={styles.sectionDescription}>My diverse technical toolkit spans modern frameworks, cloud platforms, AI/ML technologies, and IoT systems. I continuously expand my skills to deliver cutting-edge solutions.</p>
             <div className={styles.skillsGrid}>
               <div className={styles.skillCategory}>
                 <div className={styles.categoryIcon}>

@@ -6,11 +6,12 @@ interface ProjectCardProps {
   title: string;
   description: string;
   tags: string[];
+  category?: string;
   link?: string;
   image?: string;
 }
 
-export default function ProjectCard({ title, description, tags, link, image }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tags, category, link, image }: ProjectCardProps) {
   return (
     <div className={styles.card}>
       {image && (
@@ -25,6 +26,7 @@ export default function ProjectCard({ title, description, tags, link, image }: P
         </div>
       )}
       <div className={styles.content}>
+        {category && <div className={styles.category}>{category}</div>}
         <h3>{title}</h3>
         <p>{description}</p>
         <div className={styles.tags}>

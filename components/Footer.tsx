@@ -9,7 +9,7 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h3 className={styles.footerTitle}>Aldrian Loberiano</h3>
             <p className={styles.footerDescription}>
-              Full Stack Developer passionate about creating exceptional digital experiences with cutting-edge technology.
+              Full Stack Developer, System Administrator, and Network Engineer focused on building modern applications, maintaining secure systems, and managing reliable network infrastructures.
             </p>
             <div className={styles.socialIcons}>
               <a href="https://www.facebook.com/its.adinggg" target="_blank" rel="noopener noreferrer" className={styles.socialIconLink}>
@@ -38,7 +38,6 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h4 className={styles.columnTitle}>Quick Links</h4>
             <ul className={styles.linkList}>
-              <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#skills">Skills</a></li>

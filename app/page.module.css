@@ -13,7 +13,16 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+}
+
+.sectionDescription {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #9ca3af;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
 }
 
 .sectionIcon {
@@ -124,6 +133,43 @@
   50% {
     opacity: 0.5;
   }
+}
+
+.projectFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.filterBtn {
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+
+.filterBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.filterBtn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
 
 .projectGrid {
@@ -271,11 +317,7 @@
 }
 
 .skillPercent {
-  font-weight: 700;
-  color: #ffcd39;
-  font-size: 0.9rem;
-  min-width: 40px;
-  text-align: right;
+  display: none;
 }
 
 .visible .skillFill {
@@ -368,12 +410,6 @@
   margin: 0 auto 1.5rem;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
   border-radius: 16px;
-  transition: all 0.3s ease;
-}
-
-.contactCard:hover .contactCardIcon {
-  transform: scale(1.1) rotate(5deg);
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3));
 }
 
 .contactCardIcon svg {
@@ -691,7 +727,7 @@
 .aboutImageFrame {
   position: relative;
   width: 280px;
-  height: 280px;
+  height: 400px;
   border-radius: 20px;
   overflow: hidden;
   border: 3px solid transparent;
@@ -723,6 +759,7 @@
   color: #b0b0b0;
   line-height: 1.8;
   margin: 0;
+  text-align: justify;
 }
 
 .aboutInfo {
@@ -949,7 +986,28 @@
   }
 }
 
+@media (max-width: 768px) {
+  .projectFilters {
+    gap: 0.75rem;
+  }
+
+  .filterBtn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
 @media (max-width: 480px) {
+  .projectFilters {
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .filterBtn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
   .contactCard {
     padding: 1.5rem;
   }
