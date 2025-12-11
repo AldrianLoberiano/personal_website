@@ -339,7 +339,7 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '50%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '65%' }}></div>
                       </div>
                       <span className={styles.skillPercent}>50%</span>
                     </div>
@@ -363,9 +363,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '25%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>75%</span>
+                      <span className={styles.skillPercent}>25%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -375,9 +375,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '15%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>78%</span>
+                      <span className={styles.skillPercent}>15%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -387,9 +387,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '55%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>85%</span>
+                      <span className={styles.skillPercent}>55%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -399,9 +399,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '95%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>95%</span>
+                      <span className={styles.skillPercent}>90%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -411,9 +411,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '50%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>88%</span>
+                      <span className={styles.skillPercent}>50%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -423,9 +423,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '70%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>85%</span>
+                      <span className={styles.skillPercent}>70%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -435,9 +435,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '50%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>80%</span>
+                      <span className={styles.skillPercent}>50%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -447,9 +447,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '25%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>90%</span>
+                      <span className={styles.skillPercent}>25%</span>
                     </div>
                   </div>
                 </div>
@@ -473,9 +473,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '55%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>85%</span>
+                      <span className={styles.skillPercent}>55%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -485,15 +485,27 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '50%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>88%</span>
+                      <span className={styles.skillPercent}>50%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
                       <div className={styles.skillIconPlaceholder}>🦅</div>
                       <span className={styles.skillName}>NestJS</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '50%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>50%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🐍</div>
+                      <span className={styles.skillName}>Django</span>
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
@@ -504,26 +516,14 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🐍</div>
-                      <span className={styles.skillName}>Django</span>
-                    </div>
-                    <div className={styles.skillProgress}>
-                      <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
-                      </div>
-                      <span className={styles.skillPercent}>85%</span>
-                    </div>
-                  </div>
-                  <div className={styles.skillItem}>
-                    <div className={styles.skillInfo}>
                       <div className={styles.skillIconPlaceholder}>🧪</div>
                       <span className={styles.skillName}>Flask</span>
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '60%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>82%</span>
+                      <span className={styles.skillPercent}>60%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -545,7 +545,7 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '60%' }}></div>
                       </div>
                       <span className={styles.skillPercent}>75%</span>
                     </div>
@@ -557,9 +557,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '65%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>78%</span>
+                      <span className={styles.skillPercent}>65%</span>
                     </div>
                   </div>
                 </div>
@@ -594,9 +594,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '50%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>80%</span>
+                      <span className={styles.skillPercent}>50%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -606,9 +606,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>82%</span>
+                      <span className={styles.skillPercent}>80%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -618,9 +618,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '70%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>78%</span>
+                      <span className={styles.skillPercent}>70%</span>
                     </div>
                   </div>
                 </div>
@@ -641,9 +641,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '20%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>82%</span>
+                      <span className={styles.skillPercent}>20%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -653,9 +653,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '78%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '70%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>78%</span>
+                      <span className={styles.skillPercent}>70%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -665,9 +665,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '30%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>85%</span>
+                      <span className={styles.skillPercent}>30%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -677,9 +677,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '65%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>88%</span>
+                      <span className={styles.skillPercent}>65%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -761,39 +761,15 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>85%</span>
+                      <span className={styles.skillPercent}>80%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
                       <div className={styles.skillIconPlaceholder}>📓</div>
                       <span className={styles.skillName}>Jupyter Notebook</span>
-                    </div>
-                    <div className={styles.skillProgress}>
-                      <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
-                      </div>
-                      <span className={styles.skillPercent}>90%</span>
-                    </div>
-                  </div>
-                  <div className={styles.skillItem}>
-                    <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🤖</div>
-                      <span className={styles.skillName}>OpenAI API</span>
-                    </div>
-                    <div className={styles.skillProgress}>
-                      <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
-                      </div>
-                      <span className={styles.skillPercent}>82%</span>
-                    </div>
-                  </div>
-                  <div className={styles.skillItem}>
-                    <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🔮</div>
-                      <span className={styles.skillName}>Google AI APIs</span>
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
@@ -804,14 +780,38 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🤖</div>
+                      <span className={styles.skillName}>OpenAI API</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '60%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>60%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>🔮</div>
+                      <span className={styles.skillName}>Google AI APIs</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '60%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>60%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
                       <div className={styles.skillIconPlaceholder}>📊</div>
                       <span className={styles.skillName}>Google Colab</span>
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>88%</span>
+                      <span className={styles.skillPercent}>85%</span>
                     </div>
                   </div>
                 </div>
@@ -837,9 +837,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '85%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>85%</span>
+                      <span className={styles.skillPercent}>90%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -849,9 +849,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>82%</span>
+                      <span className={styles.skillPercent}>80%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -861,9 +861,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '88%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>88%</span>
+                      <span className={styles.skillPercent}>90%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -873,9 +873,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '80%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '65%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>80%</span>
+                      <span className={styles.skillPercent}>65%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
