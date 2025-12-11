@@ -14,6 +14,16 @@ export default function Home() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
+    if (formStatus) {
+      const timer = setTimeout(() => {
+        setFormStatus('');
+      }, 5000); // Fade out after 5 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [formStatus]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 300);
     };

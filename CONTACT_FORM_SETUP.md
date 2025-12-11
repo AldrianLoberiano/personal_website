@@ -79,3 +79,4 @@ If you encounter any issues:
 - Email notifications to your Gmail
 - Spam filtering
 - No watermark
+- Customizable email templates
