@@ -265,57 +265,46 @@ export default function Home() {
               <div className={styles.statCard}>
                 <div className={styles.statIcon}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                   </svg>
                 </div>
-                <div className={styles.statNumber}>15+</div>
-                <div className={styles.statLabel}>Projects Completed</div>
+                <div className={styles.statNumber}>
+                  <span className={styles.statPrefix}>~</span>15K+
+                </div>
+                <div className={styles.statLabel}>Lines of Code</div>
                 <div className={styles.statBar}>
-                  <div className={styles.statFill} style={{ width: '75%' }}></div>
+                  <div className={styles.statFill} style={{ width: '92%' }}></div>
                 </div>
               </div>
 
               <div className={styles.statCard}>
                 <div className={styles.statIcon}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                    <polyline points="2 17 12 22 22 17"></polyline>
-                    <polyline points="2 12 12 17 22 12"></polyline>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
                   </svg>
                 </div>
-                <div className={styles.statNumber}>10+</div>
-                <div className={styles.statLabel}>Technologies Used</div>
+                <div className={styles.statNumber}>
+                  <span className={styles.statPrefix}>~</span>2K+
+                </div>
+                <div className={styles.statLabel}>Hours Coded</div>
                 <div className={styles.statBar}>
-                  <div className={styles.statFill} style={{ width: '85%' }}></div>
+                  <div className={styles.statFill} style={{ width: '88%' }}></div>
                 </div>
               </div>
 
               <div className={styles.statCard}>
                 <div className={styles.statIcon}>
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                   </svg>
                 </div>
-                <div className={styles.statNumber}>50+</div>
-                <div className={styles.statLabel}>Features Developed</div>
-                <div className={styles.statBar}>
-                  <div className={styles.statFill} style={{ width: '90%' }}></div>
+                <div className={styles.statNumber}>
+                  <span className={styles.statPrefix}>~</span>15+
                 </div>
-              </div>
-
-              <div className={styles.statCard}>
-                <div className={styles.statIcon}>
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                  </svg>
-                </div>
-                <div className={styles.statNumber}>5+</div>
-                <div className={styles.statLabel}>Industries Served</div>
+                <div className={styles.statLabel}>Git Commits</div>
                 <div className={styles.statBar}>
-                  <div className={styles.statFill} style={{ width: '65%' }}></div>
+                  <div className={styles.statFill} style={{ width: '25%' }}></div>
                 </div>
               </div>
             </div>
@@ -1336,28 +1325,21 @@ export default function Home() {
                   const form = e.currentTarget;
                   const formData = new FormData(form);
                   
-                  console.log('Submitting form...');
-                  console.log('Form data:', Object.fromEntries(formData));
-                  
                   try {
                     const response = await fetch('https://api.web3forms.com/submit', {
                       method: 'POST',
                       body: formData
                     });
                     
-                    console.log('Response status:', response.status);
                     const data = await response.json();
-                    console.log('Response data:', data);
                     
                     if (response.ok && data.success) {
                       setFormStatus('Message sent successfully! I\'ll get back to you soon.');
                       form.reset();
                     } else {
-                      console.error('Form submission failed:', data);
                       setFormStatus(data.message || 'Failed to send message. Please try again or email me directly.');
                     }
                   } catch (error) {
-                    console.error('Network error:', error);
                     setFormStatus('Network error. Please check your connection and try again.');
                   } finally {
                     setIsSubmitting(false);
