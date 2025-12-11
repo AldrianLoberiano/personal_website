@@ -60,12 +60,6 @@ export default function Hero() {
           </svg>
         </a>
       </div>
-      <a href="#about" className={styles.scrollDown}>
-        <div className={styles.mouse}>
-          <div className={styles.mouseWheel}></div>
-        </div>
-        <span className={styles.scrollText}>Scroll Down</span>
-      </a>
     </section>
   );
 }
