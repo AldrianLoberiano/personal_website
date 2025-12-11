@@ -339,9 +339,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '50%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>90%</span>
+                      <span className={styles.skillPercent}>50%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
@@ -351,9 +351,9 @@ export default function Home() {
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '20%' }}></div>
                       </div>
-                      <span className={styles.skillPercent}>82%</span>
+                      <span className={styles.skillPercent}>20%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
