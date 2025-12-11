@@ -10,6 +10,8 @@ import styles from './page.module.css';
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [formStatus, setFormStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1266,46 +1268,94 @@ export default function Home() {
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              <h2>Let&apos;s Connect</h2>
+              <h2>Contact</h2>
             </div>
-            <p>Feel free to reach out if you want to collaborate or just chat!</p>
+            <p className={styles.sectionDescription}>Get in touch with me through any of the following methods or send a message directly.</p>
             
             <div className={styles.contactWrapper}>
-              <div className={styles.contactInfo}>
-                <div className={styles.contactCard}>
-                  <div className={styles.contactCardIcon}>
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
+              <div className={styles.contactSection}>
+                <h3 className={styles.contactSubtitle}>Let&apos;s Connect</h3>
+                <p className={styles.contactDescription}>Feel free to reach out if you want to collaborate or just chat!</p>
+                <div className={styles.contactInfo}>
+                  <div className={styles.contactCard}>
+                    <div className={styles.contactCardIcon}>
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:loberianorian@gmail.com">loberianorian@gmail.com</a>
                   </div>
-                  <h3>Email</h3>
-                  <a href="mailto:loberianorian@gmail.com">loberianorian@gmail.com</a>
-                </div>
 
-                <div className={styles.contactCard}>
-                  <div className={styles.contactCardIcon}>
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
+                  <div className={styles.contactCard}>
+                    <div className={styles.contactCardIcon}>
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                    </div>
+                    <h3>Phone</h3>
+                    <a href="tel:+639914852326">+63 991 485 2326</a>
                   </div>
-                  <h3>Phone</h3>
-                  <a href="tel:+639914852326">+63 991 485 2326</a>
-                </div>
 
-                <div className={styles.contactCard}>
-                  <div className={styles.contactCardIcon}>
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
+                  <div className={styles.contactCard}>
+                    <div className={styles.contactCardIcon}>
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                    </div>
+                    <h3>Location</h3>
+                    <p>Calauan, Laguna, Philippines</p>
                   </div>
-                  <h3>Location</h3>
-                  <p>Calauan, Laguna, Philippines</p>
                 </div>
               </div>
 
-              <form className={styles.contactForm}>
+              <div className={styles.contactSection}>
+                <h3 className={styles.contactSubtitle}>Send Me a Message</h3>
+                {formStatus && (
+                  <div className={formStatus.includes('successfully') ? styles.successMessage : styles.errorMessage}>
+                    {formStatus}
+                  </div>
+                )}
+                <form className={styles.contactForm} onSubmit={async (e) => {
+                  e.preventDefault();
+                  setIsSubmitting(true);
+                  setFormStatus('');
+                  
+                  const form = e.currentTarget;
+                  const formData = new FormData(form);
+                  
+                  console.log('Submitting form...');
+                  console.log('Form data:', Object.fromEntries(formData));
+                  
+                  try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                      method: 'POST',
+                      body: formData
+                    });
+                    
+                    console.log('Response status:', response.status);
+                    const data = await response.json();
+                    console.log('Response data:', data);
+                    
+                    if (response.ok && data.success) {
+                      setFormStatus('Message sent successfully! I\'ll get back to you soon.');
+                      form.reset();
+                    } else {
+                      console.error('Form submission failed:', data);
+                      setFormStatus(data.message || 'Failed to send message. Please try again or email me directly.');
+                    }
+                  } catch (error) {
+                    console.error('Network error:', error);
+                    setFormStatus('Network error. Please check your connection and try again.');
+                  } finally {
+                    setIsSubmitting(false);
+                  }
+                }}>
+              <input type="hidden" name="access_key" value="d5ee3d7a-b967-4c66-bc77-8564b9babf9b" />
+              <input type="hidden" name="redirect" value="false" />
+              <input type="hidden" name="from_name" value="Portfolio Contact Form" />
               <div className={styles.formGroup}>
                 <label htmlFor="name">Name</label>
                 <input 
@@ -1350,14 +1400,17 @@ export default function Home() {
                 ></textarea>
               </div>
               
-              <button type="submit" className={styles.contactBtn}>
-                <span>Send Message</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
+              <button type="submit" className={styles.contactBtn} disabled={isSubmitting}>
+                <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                {!isSubmitting && (
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                )}
               </button>
-            </form>
+              </form>
+              </div>
             </div>
           </div>
         </section>
