@@ -88,7 +88,7 @@ export default function Header(): JSX.Element {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <Link href="/" onClick={(e) => handleScroll(e, '#home')}>
+          <Link href="/" onClick={(e) => handleClick(e, '#home')}>
             <span className={styles.logoText}>drian.dev</span>
           </Link>
         </div>
