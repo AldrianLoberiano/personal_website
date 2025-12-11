@@ -15,11 +15,7 @@ Your contact form is now configured to send emails to your Gmail account. Follow
 1. Open `app/page.tsx`
 2. Find this line (around line 1347):
    ```tsx
-   <input
-     type="hidden"
-     name="access_key"
-     value="d5ee3d7a-b967-4c66-bc77-8564b9babf9b"
-   />
+   <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
    ```
 3. Replace `YOUR_WEB3FORMS_ACCESS_KEY` with your actual access key from Web3Forms
 
