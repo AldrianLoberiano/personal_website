@@ -2,24 +2,28 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
 interface NavLink {
   href: string;
   label: string;
+  route: string;
 }
 
 const navLinks: NavLink[] = [
-  { href: '#home', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#home', label: 'Home', route: '/' },
+  { href: '#about', label: 'About', route: '/about' },
+  { href: '#projects', label: 'Projects', route: '/projects' },
+  { href: '#skills', label: 'Skills', route: '/skills' },
+  { href: '#contact', label: 'Contact', route: '/contact' },
 ];
 
 export default function Header(): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('#home');
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,36 +63,41 @@ export default function Header(): JSX.Element {
     setIsMenuOpen(false);
   };
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string): void => {
-    e.preventDefault();
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, link: NavLink): void => {
     closeMenu();
-
-    if (href === '#home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('#home');
-      return;
-    }
-
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
     
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    // If on homepage and clicking a section, scroll to it
+    if (isHomePage) {
+      e.preventDefault();
+      
+      if (link.href === '#home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setActiveSection('#home');
+        return;
+      }
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      const targetId = link.href.replace('#', '');
+      const element = document.getElementById(targetId);
+      
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
+    // If not on homepage, use the route to navigate to the page
   };
 
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles.logo}>
-          <Link href="/" onClick={(e) => handleClick(e, '#home')}>
+          <Link href="/">
             <span className={styles.logoText}>drian.dev</span>
           </Link>
         </div>
@@ -108,8 +117,8 @@ export default function Header(): JSX.Element {
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link 
-                href={link.href} 
-                onClick={(e) => handleClick(e, link.href)}
+                href={isHomePage ? link.href : link.route}
+                onClick={(e) => handleClick(e, link)}
                 className={activeSection === link.href ? styles.active : ''}
               >
                 {link.label}
