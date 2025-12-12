@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../page.module.css';
 
 export default function AboutPage(): JSX.Element {
@@ -65,7 +66,7 @@ export default function AboutPage(): JSX.Element {
               <div className={styles.aboutGrid}>
                 <div className={styles.aboutImageSection}>
                   <div className={styles.aboutImageFrame}>
-                    <img src="/images/profile.jpg" alt="Aldrian Loberiano" />
+                    <Image src="/images/profile.jpg" alt="Aldrian Loberiano" width={400} height={400} />
                   </div>
                 </div>
                 
