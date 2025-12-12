@@ -1,7 +1,18 @@
+'use client';
+
 import React from 'react';
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.content}>
@@ -38,10 +49,26 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h4 className={styles.columnTitle}>Quick Links</h4>
             <ul className={styles.linkList}>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <Link href="/" onClick={(e) => handleLinkClick(e, 'about')}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/" onClick={(e) => handleLinkClick(e, 'projects')}>
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/" onClick={(e) => handleLinkClick(e, 'skills')}>
+                  Skills
+                </Link>
+              </li>
+              <li>
+                <Link href="/" onClick={(e) => handleLinkClick(e, 'contact')}>
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
