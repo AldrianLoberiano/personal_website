@@ -4,6 +4,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Aldrian Loberiano - Full Stack Developer',
   description: 'Personal website and portfolio',
+  icons: {
+    icon: '/favicon1.png',
+  },
 };
 
 export default function RootLayout({

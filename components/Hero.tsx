@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -34,7 +35,14 @@ export default function Hero() {
         <div className={styles.imageFrame}>
           <div className={styles.frameDecoration}></div>
           <div className={styles.imageContainer}>
-            <img src="/images/profile.png" alt="Aldrian Loberiano" className={styles.profileImage} />
+            <Image 
+              src="/images/profile.png" 
+              alt="Aldrian Loberiano" 
+              className={styles.profileImage}
+              width={400}
+              height={400}
+              priority
+            />
           </div>
         </div>
       </div>
