@@ -38,6 +38,7 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+  text-align: justify;
 }
 
 .socialIcons {
@@ -167,6 +168,25 @@
   .footerGrid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    text-align: center;
+  }
+  
+  .footerColumn {
+    align-items: center;
+  }
+  
+  .socialIcons {
+    justify-content: center;
+  }
+  
+  .contactList li {
+    justify-content: center;
+  }
+  
+  .linkList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .footerBottom {

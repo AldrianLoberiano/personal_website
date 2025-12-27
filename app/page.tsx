@@ -6,6 +6,78 @@ import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import ProjectCard from '@/components/ProjectCard';
 import styles from './page.module.css';
+import {
+  ReactIcon,
+  VueIcon,
+  AngularIcon,
+  TypeScriptIcon,
+  TailwindIcon,
+  BootstrapIcon,
+  ViteIcon,
+  JQueryIcon,
+  NodeIcon,
+  ExpressIcon,
+  NestJSIcon,
+  DjangoIcon,
+  FlaskIcon,
+  LaravelIcon,
+  SpringIcon,
+  AspNetIcon,
+  MySQLIcon,
+  PostgreSQLIcon,
+  SQLiteIcon,
+  SQLServerIcon,
+  AzureIcon,
+  GCPIcon,
+  FirebaseIcon,
+  VercelIcon,
+  TensorFlowIcon,
+  PyTorchIcon,
+  OpenCVIcon,
+  ArduinoIcon,
+  FigmaIcon,
+  CanvaIcon,
+  HTML5Icon,
+  CSS3Icon,
+  NuxtIcon,
+  HerokuIcon,
+  JupyterIcon,
+  ChatGPTIcon,
+  PostmanIcon,
+  StreamlitIcon,
+  PhotoshopIcon,
+  AdobeIllustratorIcon,
+  GitHubIcon,
+  GitLabIcon,
+  MicrosoftTeamsIcon,
+  NotionIcon,
+  SlackIcon,
+  ESP32Icon,
+  ArduinoIDEIcon,
+  PlatformIOIcon,
+  BlynkIcon,
+  ThingsBoardIcon,
+  GoogleCloudIoTIcon,
+  CircuitDesignerIcon,
+  WokwiIcon,
+  GoogleAIIcon,
+  PlaceholderIcon,
+  NPMIcon,
+  YarnIcon,
+  ComposerIcon,
+  PipIcon,
+  VSCodeIcon,
+  NetBeansIcon,
+  AndroidStudioIcon,
+  PyCharmIcon,
+  EclipseIcon,
+  IntelliJIdeaIcon,
+  WebStormIcon,
+  SublimeTextIcon,
+  AtomIcon,
+  AlpineJSIcon,
+  PHPIcon,
+} from '@/components/icons';
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -77,29 +149,30 @@ export default function Home() {
   );
 
   const categories = [
-    'All',
-    'Web Application',
-    'Mobile Application',
-    'Desktop Application',
-    'E-commerce',
-    'Government',
-    'Healthcare',
-    'Educational Platform',
-    'Tourism',
-    'Business Management',
-    'Business Directory',
-    'Service Management',
-    'POS System',
-    'AI Assistant',
-    'IoT',
-    'Cisco Projects'
+    { name: 'All', icon: '🗂️' },
+    { name: 'Web Application', icon: '🌐' },
+    { name: 'Mobile Application', icon: '📱' },
+    { name: 'Desktop Application', icon: '💻' },
+    { name: 'E-commerce', icon: '🛒' },
+    { name: 'Government', icon: '🏛️' },
+    { name: 'Healthcare', icon: '🏥' },
+    { name: 'Educational Platform', icon: '📚' },
+    { name: 'Tourism', icon: '✈️' },
+    { name: 'Business Management', icon: '📊' },
+    { name: 'Business Directory', icon: '📇' },
+    { name: 'Service Management', icon: '🔧' },
+    { name: 'POS System', icon: '💳' },
+    { name: 'AI Assistant', icon: '🤖' },
+    { name: 'Object Detection', icon: '🎯' },
+    { name: 'IoT', icon: '📡' },
+    { name: 'Cisco Projects', icon: '🔌' }
   ];
 
   const projects = [
     {
       title: "Barangay Appointment System",
       description: "A comprehensive PHP-based appointment management system for barangay offices. Features include online booking, queue management, and real-time notifications for citizens and staff.",
-      tags: ["PHP", "MySQL", "Bootstrap"],
+      tags: ["PHP 7.4 +", "MySQL", "Bootstrap", "Web server (Apache/Nginx)"],
       category: "Government",
       link: "https://github.com/AldrianLoberiano/sto_tomas_appointment_system",
       image: "/images/project1.png"
@@ -113,9 +186,9 @@ export default function Home() {
       image: "/images/project2.png"
     },
     {
-      title: "Coffee Shop POS",
+      title: "Coffee Shop",
       description: "Lightweight Point of Sale system with secure authentication, role-based access control for Admin, Barista, and Cashier. Includes inventory tracking, sales reporting, and transaction management.",
-      tags: ["PHP", "CSS", "MySQL"],
+      tags: ["PHP 7.4 +", "CSS", "MySQL"],
       category: "POS System",
       link: "https://github.com/AldrianLoberiano/POS",
       image: "/images/project3.png"
@@ -127,6 +200,23 @@ export default function Home() {
       category: "IoT",
       link: "https://github.com/AldrianLoberiano/gas_and_smoke_with_IoT",
       image: "/images/project4.jpg"
+    },
+    {
+      title: "SmartCart",
+      description: "A modern e-commerce platform featuring a sleek home page with highlighted products and categories, advanced product listings with smart filtering and real-time stock updates, and detailed product pages with reviews and recommendations. It includes an intuitive shopping cart for easy order management and a user account system for profile control, order history, and personalized settings.",
+      tags: ["Laravel 10.x", "PHP 8.1 +", "Tailwind CSS 3.x","Alpine.js 3.x", "MySQL"],
+      category: "E-commerce",
+      link: "https://github.com/AldrianLoberiano/smart_cart_e_commerce",
+      image: "/images/project5.png"
+    }
+    ,
+    {
+      title: "License Plate Detection System",
+      description: "A real-time license plate detection system using YOLOv8 and OpenCV. This application captures video from a webcam and detects license plates in real-time, saving detected plates to disk automatically.",
+      tags: ["Python 3.11", "Yolov8", "OpenCV","NumPy", "Threading"],
+      category: "Object Detection",
+      link: "https://github.com/AldrianLoberiano/platenumber",
+      image: "/images/project6.jpg"
     }
   ];
 
@@ -160,7 +250,7 @@ export default function Home() {
                 
                 <div className={styles.aboutTextSection}>
                   <p className={styles.aboutDescription}>
-                    Hi! I’m a versatile IT professional skilled in full-stack development, system administration, and network engineering. I build end-to-end web solutions, maintain reliable IT infrastructure, and troubleshoot technical issues to keep operations running smoothly. Passionate about innovation, I leverage new technologies to enhance performance, strengthen security, and simplify workflows.
+                    Hi! I&apos;m a versatile IT professional specializing in full-stack development, system administration, and network engineering. I build end-to-end web solutions, maintain reliable IT infrastructure, and ensure seamless network operations. Passionate about AI and machine learning, I&apos;m expanding into computer vision technologies, exploring image processing, object detection, and deep learning models to create innovative digital solutions that enhance performance and security.
                   </p>
                   
                   <div className={styles.aboutInfo}>
@@ -246,11 +336,12 @@ export default function Home() {
             <div className={styles.projectFilters}>
               {categories.map((category) => (
                 <button
-                  key={category}
-                  className={`${styles.filterBtn} ${selectedCategory === category ? styles.active : ''}`}
-                  onClick={() => setSelectedCategory(category)}
+                  key={category.name}
+                  className={`${styles.filterBtn} ${selectedCategory === category.name ? styles.active : ''}`}
+                  onClick={() => setSelectedCategory(category.name)}
                 >
-                  {category}
+                  <span>{category.icon}</span>
+                  <span>{category.name}</span>
                 </button>
               ))}
             </div>
@@ -339,7 +430,9 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>⚛️</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <ReactIcon />
+                      </div>
                       <span className={styles.skillName}>React / Next.js</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -350,7 +443,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🟢</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <VueIcon />
+                      </div>
                       <span className={styles.skillName}>Vue.js</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -361,7 +456,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🅰️</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <AngularIcon />
+                      </div>
                       <span className={styles.skillName}>Angular</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -373,7 +470,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🟩</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <NuxtIcon />
+                      </div>
                       <span className={styles.skillName}>Nuxt.js</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -385,7 +484,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📘</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <TypeScriptIcon />
+                      </div>
                       <span className={styles.skillName}>TypeScript</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -397,19 +498,37 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🎨</div>
-                      <span className={styles.skillName}>HTML / CSS</span>
+                      <div className={styles.skillIconPlaceholder}>
+                        <HTML5Icon />
+                      </div>
+                      <span className={styles.skillName}>HTML5</span>
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                        <div className={styles.skillFill} style={{ width: '95%' }}></div>
                       </div>
                       <span className={styles.skillPercent}>95%</span>
                     </div>
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>💨</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <CSS3Icon />
+                      </div>
+                      <span className={styles.skillName}>CSS3</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '90%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>
+                        <TailwindIcon />
+                      </div>
                       <span className={styles.skillName}>Tailwind CSS</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -421,7 +540,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🅱️</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <BootstrapIcon />
+                      </div>
                       <span className={styles.skillName}>Bootstrap</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -433,7 +554,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>⚡</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <ViteIcon />
+                      </div>
                       <span className={styles.skillName}>Vite</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -445,7 +568,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>💲</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <JQueryIcon />
+                      </div>
                       <span className={styles.skillName}>jQuery</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -453,6 +578,20 @@ export default function Home() {
                         <div className={styles.skillFill} style={{ width: '90%' }}></div>
                       </div>
                       <span className={styles.skillPercent}>90%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>
+                        <AlpineJSIcon />
+                      </div>
+                      <span className={styles.skillName}>Alpine.js</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '75%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>75%</span>
                     </div>
                   </div>
                 </div>
@@ -471,7 +610,9 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🟢</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <NodeIcon />
+                      </div>
                       <span className={styles.skillName}>Node.js</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -483,7 +624,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🚂</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <ExpressIcon />
+                      </div>
                       <span className={styles.skillName}>Express.js</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -495,7 +638,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🦅</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <NestJSIcon />
+                      </div>
                       <span className={styles.skillName}>NestJS</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -507,7 +652,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🐍</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <DjangoIcon />
+                      </div>
                       <span className={styles.skillName}>Django</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -519,7 +666,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🧪</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <FlaskIcon />
+                      </div>
                       <span className={styles.skillName}>Flask</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -531,7 +680,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🎼</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <LaravelIcon />
+                      </div>
                       <span className={styles.skillName}>Laravel</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -542,7 +693,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🍃</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <SpringIcon />
+                      </div>
                       <span className={styles.skillName}>Spring Boot</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -553,7 +706,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🔷</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <AspNetIcon />
+                      </div>
                       <span className={styles.skillName}>ASP.NET Core</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -561,6 +716,20 @@ export default function Home() {
                         <div className={styles.skillFill} style={{ width: '78%' }}></div>
                       </div>
                       <span className={styles.skillPercent}>78%</span>
+                    </div>
+                  </div>
+                  <div className={styles.skillItem}>
+                    <div className={styles.skillInfo}>
+                      <div className={styles.skillIconPlaceholder}>
+                        <PHPIcon />
+                      </div>
+                      <span className={styles.skillName}>PHP</span>
+                    </div>
+                    <div className={styles.skillProgress}>
+                      <div className={styles.skillBar}>
+                        <div className={styles.skillFill} style={{ width: '82%' }}></div>
+                      </div>
+                      <span className={styles.skillPercent}>82%</span>
                     </div>
                   </div>
                 </div>
@@ -578,7 +747,9 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🐬</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <MySQLIcon />
+                      </div>
                       <span className={styles.skillName}>MySQL</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -589,7 +760,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🐘</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <PostgreSQLIcon />
+                      </div>
                       <span className={styles.skillName}>PostgreSQL</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -601,7 +774,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🗃️</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <SQLiteIcon />
+                      </div>
                       <span className={styles.skillName}>SQLite</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -613,7 +788,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🔷</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <SQLServerIcon />
+                      </div>
                       <span className={styles.skillName}>Microsoft SQL Server</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -636,7 +813,9 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🔷</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <AzureIcon />
+                      </div>
                       <span className={styles.skillName}>Microsoft Azure</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -648,7 +827,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>☁️</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <GCPIcon />
+                      </div>
                       <span className={styles.skillName}>Google Cloud Platform</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -660,7 +841,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🔥</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <FirebaseIcon />
+                      </div>
                       <span className={styles.skillName}>Firebase</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -672,7 +855,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>▲</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <VercelIcon />
+                      </div>
                       <span className={styles.skillName}>Vercel</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -684,34 +869,12 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🌐</div>
-                      <span className={styles.skillName}>Hostinger</span>
+                      <div className={styles.skillIconPlaceholder}><HerokuIcon /></div>
+                      <span className={styles.skillName}>Heroku</span>
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
                         <div className={styles.skillFill} style={{ width: '50%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.skillItem}>
-                    <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📛</div>
-                      <span className={styles.skillName}>Name.com</span>
-                    </div>
-                    <div className={styles.skillProgress}>
-                      <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '50%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.skillItem}>
-                    <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>💰</div>
-                      <span className={styles.skillName}>Namecheap</span>
-                    </div>
-                    <div className={styles.skillProgress}>
-                      <div className={styles.skillBar}>
-                        <div className={styles.skillFill} style={{ width: '45%' }}></div>
                       </div>
                     </div>
                   </div>
@@ -729,7 +892,9 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🧠</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <TensorFlowIcon />
+                      </div>
                       <span className={styles.skillName}>TensorFlow</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -740,7 +905,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🔥</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <PyTorchIcon />
+                      </div>
                       <span className={styles.skillName}>PyTorch</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -751,7 +918,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>👁️</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <OpenCVIcon />
+                      </div>
                       <span className={styles.skillName}>OpenCV</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -763,7 +932,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📓</div>
+                      <div className={styles.skillIconPlaceholder}><JupyterIcon /></div>
                       <span className={styles.skillName}>Jupyter Notebook</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -775,7 +944,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🤖</div>
+                      <div className={styles.skillIconPlaceholder}><ChatGPTIcon /></div>
                       <span className={styles.skillName}>OpenAI API</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -787,7 +956,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🔮</div>
+                      <div className={styles.skillIconPlaceholder}><GoogleAIIcon /></div>
                       <span className={styles.skillName}>Google AI APIs</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -799,8 +968,8 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📊</div>
-                      <span className={styles.skillName}>Google Colab</span>
+                      <div className={styles.skillIconPlaceholder}><StreamlitIcon /></div>
+                      <span className={styles.skillName}>Streamlit</span>
                     </div>
                     <div className={styles.skillProgress}>
                       <div className={styles.skillBar}>
@@ -827,7 +996,9 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🤖</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <ArduinoIcon />
+                      </div>
                       <span className={styles.skillName}>Arduino</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -839,7 +1010,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📡</div>
+                      <div className={styles.skillIconPlaceholder}><ESP32Icon /></div>
                       <span className={styles.skillName}>ESP32</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -851,7 +1022,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>💻</div>
+                      <div className={styles.skillIconPlaceholder}><ArduinoIDEIcon /></div>
                       <span className={styles.skillName}>Arduino IDE</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -863,7 +1034,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>⚙️</div>
+                      <div className={styles.skillIconPlaceholder}><PlatformIOIcon /></div>
                       <span className={styles.skillName}>PlatformIO</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -875,7 +1046,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📱</div>
+                      <div className={styles.skillIconPlaceholder}><BlynkIcon /></div>
                       <span className={styles.skillName}>Blynk</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -886,7 +1057,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📊</div>
+                      <div className={styles.skillIconPlaceholder}><ThingsBoardIcon /></div>
                       <span className={styles.skillName}>ThingsBoard</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -897,7 +1068,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>☁️</div>
+                      <div className={styles.skillIconPlaceholder}><GoogleCloudIoTIcon /></div>
                       <span className={styles.skillName}>Google Cloud IoT</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -908,7 +1079,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🔌</div>
+                      <div className={styles.skillIconPlaceholder}><CircuitDesignerIcon /></div>
                       <span className={styles.skillName}>Circuit Designer</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -919,7 +1090,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🧪</div>
+                      <div className={styles.skillIconPlaceholder}><WokwiIcon /></div>
                       <span className={styles.skillName}>Wokwi</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -943,7 +1114,9 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🎨</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <CanvaIcon />
+                      </div>
                       <span className={styles.skillName}>Canva</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -955,7 +1128,9 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🎯</div>
+                      <div className={styles.skillIconPlaceholder}>
+                        <FigmaIcon />
+                      </div>
                       <span className={styles.skillName}>Figma</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -966,7 +1141,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📷</div>
+                      <div className={styles.skillIconPlaceholder}><PhotoshopIcon /></div>
                       <span className={styles.skillName}>Adobe Photoshop</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -977,7 +1152,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>✏️</div>
+                      <div className={styles.skillIconPlaceholder}><AdobeIllustratorIcon /></div>
                       <span className={styles.skillName}>Adobe Illustrator</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1002,7 +1177,7 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🐙</div>
+                      <div className={styles.skillIconPlaceholder}><GitHubIcon /></div>
                       <span className={styles.skillName}>GitHub</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1013,7 +1188,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🦊</div>
+                      <div className={styles.skillIconPlaceholder}><GitLabIcon /></div>
                       <span className={styles.skillName}>GitLab</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1024,7 +1199,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>👥</div>
+                      <div className={styles.skillIconPlaceholder}><MicrosoftTeamsIcon /></div>
                       <span className={styles.skillName}>Microsoft Teams</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1035,7 +1210,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📝</div>
+                      <div className={styles.skillIconPlaceholder}><NotionIcon /></div>
                       <span className={styles.skillName}>Notion</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1046,7 +1221,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>💬</div>
+                      <div className={styles.skillIconPlaceholder}><SlackIcon /></div>
                       <span className={styles.skillName}>Slack</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1069,7 +1244,7 @@ export default function Home() {
                 <div className={styles.skillsList}>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📦</div>
+                      <div className={styles.skillIconPlaceholder}><NPMIcon /></div>
                       <span className={styles.skillName}>NPM</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1080,7 +1255,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🧶</div>
+                      <div className={styles.skillIconPlaceholder}><YarnIcon /></div>
                       <span className={styles.skillName}>Yarn</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1091,7 +1266,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🎼</div>
+                      <div className={styles.skillIconPlaceholder}><ComposerIcon /></div>
                       <span className={styles.skillName}>Composer</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1102,7 +1277,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🐍</div>
+                      <div className={styles.skillIconPlaceholder}><PipIcon /></div>
                       <span className={styles.skillName}>Pip</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1113,7 +1288,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>💻</div>
+                      <div className={styles.skillIconPlaceholder}><VSCodeIcon /></div>
                       <span className={styles.skillName}>VS Code</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1124,7 +1299,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🌐</div>
+                      <div className={styles.skillIconPlaceholder}><NetBeansIcon /></div>
                       <span className={styles.skillName}>NetBeans</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1135,7 +1310,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🤖</div>
+                      <div className={styles.skillIconPlaceholder}><AndroidStudioIcon /></div>
                       <span className={styles.skillName}>Android Studio</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1146,7 +1321,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🐍</div>
+                      <div className={styles.skillIconPlaceholder}><PyCharmIcon /></div>
                       <span className={styles.skillName}>PyCharm</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1157,7 +1332,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🌙</div>
+                      <div className={styles.skillIconPlaceholder}><EclipseIcon /></div>
                       <span className={styles.skillName}>Eclipse</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1168,7 +1343,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📮</div>
+                      <div className={styles.skillIconPlaceholder}><PostmanIcon /></div>
                       <span className={styles.skillName}>Postman</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1179,7 +1354,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>💡</div>
+                      <div className={styles.skillIconPlaceholder}><IntelliJIdeaIcon /></div>
                       <span className={styles.skillName}>IntelliJ IDEA</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1190,7 +1365,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>🌊</div>
+                      <div className={styles.skillIconPlaceholder}><WebStormIcon /></div>
                       <span className={styles.skillName}>WebStorm</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1201,7 +1376,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>📝</div>
+                      <div className={styles.skillIconPlaceholder}><SublimeTextIcon /></div>
                       <span className={styles.skillName}>Sublime Text</span>
                     </div>
                     <div className={styles.skillProgress}>
@@ -1212,7 +1387,7 @@ export default function Home() {
                   </div>
                   <div className={styles.skillItem}>
                     <div className={styles.skillInfo}>
-                      <div className={styles.skillIconPlaceholder}>⚛️</div>
+                      <div className={styles.skillIconPlaceholder}><AtomIcon /></div>
                       <span className={styles.skillName}>Atom</span>
                     </div>
                     <div className={styles.skillProgress}>

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Aldrian Loberiano - Full Stack Developer',
   description: 'Personal website and portfolio',
   icons: {
-    icon: '/favicon1.png',
+    icon: '/favicon2.png',
   },
 };
 

@@ -15,10 +15,10 @@ export default function Hero() {
             <span className={styles.name}>Aldrian Loberiano</span>
           </h1>
           <p className={styles.subtitle}>
-            <span className={styles.highlight}>Full Stack Developer</span> <span className={styles.divider}>|</span> System Administrator <span className={styles.divider}>|</span> Network Engineer
+            <span className={styles.highlight}>Full Stack Developer</span> <span className={styles.divider}>|</span> Junior Computer Vision Engineer <span className={styles.divider}>|</span> <br /> System & Network Engineer
           </p>
           <p className={styles.description}>
-            I am a versatile IT professional with experience in full-stack development, system administration, and network engineering. I build and maintain complete web applications, configure and secure IT systems, and ensure reliable network connectivity across the organization. My skills allow me to troubleshoot technical issues, optimize infrastructure performance, and deliver efficient digital solutions from front-end development to backend services and network operations.
+            A versatile IT professional specializing in full-stack development, system administration, and network engineering. Passionate about AI and machine learning, I&apos;m expanding into computer vision technologies, working with image processing, object detection, and deep learning models to deliver innovative digital solutions.
           </p>
           <div className={styles.buttons}>
           <a href="#projects" className={styles.primaryBtn}>

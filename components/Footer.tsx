@@ -20,7 +20,7 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h3 className={styles.footerTitle}>Aldrian Loberiano</h3>
             <p className={styles.footerDescription}>
-              Full Stack Developer, System Administrator, and Network Engineer focused on building modern applications, maintaining secure systems, and managing reliable network infrastructures.
+              Full-stack developer, system administrator, and network engineer with a passion for AI, machine learning, and computer vision. Building innovative solutions that bridge technology and creativity.
             </p>
             <div className={styles.socialIcons}>
               <a href="https://www.facebook.com/its.adinggg" target="_blank" rel="noopener noreferrer" className={styles.socialIconLink}>
@@ -94,7 +94,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>&copy; 2024 Aldrian Loberiano. All rights reserved.</p>
+          <p>&copy; 2025 Aldrian Loberiano. All rights reserved.</p>
           <p className={styles.madeWith}>
             Made with <span className={styles.heart}>♥</span> and lots of ☕
           </p>
