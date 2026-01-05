@@ -149,23 +149,23 @@ export default function Home() {
   );
 
   const categories = [
-    { name: 'All', icon: '🗂️' },
-    { name: 'Web Application', icon: '🌐' },
-    { name: 'Mobile Application', icon: '📱' },
-    { name: 'Desktop Application', icon: '💻' },
-    { name: 'E-commerce', icon: '🛒' },
-    { name: 'Government', icon: '🏛️' },
-    { name: 'Healthcare', icon: '🏥' },
-    { name: 'Educational Platform', icon: '📚' },
-    { name: 'Tourism', icon: '✈️' },
-    { name: 'Business Management', icon: '📊' },
-    { name: 'Business Directory', icon: '📇' },
-    { name: 'Service Management', icon: '🔧' },
-    { name: 'POS System', icon: '💳' },
-    { name: 'AI Assistant', icon: '🤖' },
-    { name: 'Object Detection', icon: '🎯' },
-    { name: 'IoT', icon: '📡' },
-    { name: 'Cisco Projects', icon: '🔌' }
+    'All',
+    'Web Application',
+    'Mobile Application',
+    'Desktop Application',
+    'E-commerce',
+    'Government',
+    'Healthcare',
+    'Educational Platform',
+    'Tourism',
+    'Business Management',
+    'Business Directory',
+    'Service Management',
+    'POS System',
+    'AI Assistant',
+    'Object Detection',
+    'IoT',
+    'Cisco Projects'
   ];
 
   const projects = [
@@ -336,12 +336,11 @@ export default function Home() {
             <div className={styles.projectFilters}>
               {categories.map((category) => (
                 <button
-                  key={category.name}
-                  className={`${styles.filterBtn} ${selectedCategory === category.name ? styles.active : ''}`}
-                  onClick={() => setSelectedCategory(category.name)}
+                  key={category}
+                  className={`${styles.filterBtn} ${selectedCategory === category ? styles.active : ''}`}
+                  onClick={() => setSelectedCategory(category)}
                 >
-                  <span>{category.icon}</span>
-                  <span>{category.name}</span>
+                  {category}
                 </button>
               ))}
             </div>

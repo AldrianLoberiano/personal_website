@@ -8,6 +8,39 @@ import styles from '../page.module.css';
 export default function ContactPage(): JSX.Element {
   const [formStatus, setFormStatus] = useState<string>('');
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [userLocation, setUserLocation] = useState<string>('');
+
+  useEffect(() => {
+    // Get user's location using IP geolocation API (free, no auth required)
+    const fetchLocation = async () => {
+      try {
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+        
+        if (data.city && data.country_name) {
+          const locationString = `${data.city}, ${data.region}, ${data.country_name} (IP: ${data.ip})`;
+          setUserLocation(locationString);
+          console.log('Location detected:', locationString);
+        }
+      } catch (error) {
+        console.log('Unable to fetch location:', error);
+        // Fallback to browser geolocation
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const { latitude, longitude } = position.coords;
+              setUserLocation(`Coordinates: ${latitude}, ${longitude}`);
+            },
+            (error) => {
+              console.log('Location access denied or unavailable');
+            }
+          );
+        }
+      }
+    };
+
+    fetchLocation();
+  }, []);
 
   useEffect(() => {
     if (formStatus) {
@@ -113,7 +146,7 @@ export default function ContactPage(): JSX.Element {
                   Feel free to reach out if you want to collaborate or just chat!
                 </p>
                 <div className={styles.contactInfo}>
-                  <div className={styles.contactCard}>
+                  <a href="mailto:loberianorian@gmail.com" className={styles.contactCard}>
                     <div className={styles.contactCardIcon}>
                       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -121,20 +154,29 @@ export default function ContactPage(): JSX.Element {
                       </svg>
                     </div>
                     <h3>Email</h3>
-                    <a href="mailto:loberianorian@gmail.com">loberianorian@gmail.com</a>
-                  </div>
+                    <p>loberianorian@gmail.com</p>
+                  </a>
 
-                  <div className={styles.contactCard}>
+                  <a href="tel:+639914852326" className={styles.contactCard}>
                     <div className={styles.contactCardIcon}>
                       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                       </svg>
                     </div>
                     <h3>Phone</h3>
-                    <a href="tel:+639914852326">+63 991 485 2326</a>
-                  </div>
+                    <p>+63 991 485 2326</p>
+                  </a>
 
-                  <div className={styles.contactCard}>
+                  <a 
+                    href="https://maps.google.com/?q=Calauan,Laguna,Philippines" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.contactCard}
+                    onClick={(e) => {
+                      console.log('Location card clicked!');
+                      // Let the default behavior happen
+                    }}
+                  >
                     <div className={styles.contactCardIcon}>
                       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -143,7 +185,7 @@ export default function ContactPage(): JSX.Element {
                     </div>
                     <h3>Location</h3>
                     <p>Calauan, Laguna, Philippines</p>
-                  </div>
+                  </a>
                 </div>
               </div>
 
@@ -158,6 +200,7 @@ export default function ContactPage(): JSX.Element {
                   <input type="hidden" name="access_key" value="d5ee3d7a-b967-4c66-bc77-8564b9babf9b" />
                   <input type="hidden" name="redirect" value="false" />
                   <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+                  {userLocation && <input type="hidden" name="user_location" value={userLocation} />}
                   
                   <div className={styles.formGroup}>
                     <label htmlFor="name">Name</label>

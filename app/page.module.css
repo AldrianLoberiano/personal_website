@@ -399,6 +399,11 @@
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 1;
 }
 
 .contactCard::before {
@@ -433,10 +438,12 @@
   margin: 0 auto 1rem;
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
   border-radius: 12px;
+  pointer-events: none;
 }
 
 .contactCardIcon svg {
   stroke: url(#gradient);
+  pointer-events: none;
 }
 
 .contactCard h3 {
@@ -447,18 +454,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 700;
-}
-
-.contactCard a {
-  color: #b0b0b0;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-  display: block;
-}
-
-.contactCard a:hover {
-  color: #ffffff;
+  pointer-events: none;
 }
 
 .contactCard p {
@@ -466,6 +462,7 @@
   font-size: 0.9rem;
   margin: 0;
   line-height: 1.6;
+  pointer-events: none;
 }
 
 .contactForm {
