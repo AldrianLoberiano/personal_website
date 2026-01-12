@@ -15,10 +15,10 @@ export default function Hero() {
             <span className={styles.name}>Aldrian Loberiano</span>
           </h1>
           <p className={styles.subtitle}>
-            <span className={styles.highlight}>Full Stack Developer</span> <span className={styles.divider}>|</span> Junior Computer Vision Engineer <span className={styles.divider}>|</span> <br /> System & Network Engineer
+            <span className={styles.highlight}>Full Stack Developer</span> <span className={styles.divider}>|</span> Junior Computer Vision Engineer <span className={styles.divider}>|</span> <br /> System & Network Engineer <span className={styles.divider}>|</span> UI & UX Designer
           </p>
           <p className={styles.description}>
-            A versatile IT professional specializing in full-stack development, system administration, and network engineering. Passionate about AI and machine learning, I&apos;m expanding into computer vision technologies, working with image processing, object detection, and deep learning models to deliver innovative digital solutions.
+            A versatile IT professional specializing in full-stack development, system administration, network engineering, and UI/UX design. Passionate about AI and machine learning, I&apos;m expanding into computer vision technologies, working with image processing, object detection, and deep learning models while crafting intuitive user experiences to deliver innovative digital solutions.
           </p>
           <div className={styles.buttons}>
           <a href="#projects" className={styles.primaryBtn}>

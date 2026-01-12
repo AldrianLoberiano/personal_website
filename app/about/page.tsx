@@ -72,7 +72,7 @@ export default function AboutPage(): JSX.Element {
                 
                 <div className={styles.aboutTextSection}>
                   <p className={styles.aboutDescription}>
-                    Hi! I&apos;m a versatile IT professional specializing in full-stack development, system administration, and network engineering. I build end-to-end web solutions, maintain reliable IT infrastructure, and ensure seamless network operations. Passionate about AI and machine learning, I&apos;m expanding into computer vision technologies, exploring image processing, object detection, and deep learning models to create innovative digital solutions that enhance performance and security.
+                    Hi! I&apos;m a versatile IT professional specializing in full-stack development, system administration, network engineering, and UI/UX design. I build end-to-end web solutions, maintain reliable IT infrastructure, and ensure seamless network operations. Passionate about AI and machine learning, I&apos;m expanding into computer vision technologies, exploring image processing, object detection, and deep learning models while crafting intuitive user experiences to create innovative digital solutions that enhance performance and security.
                   </p>
                   
                   <div className={styles.aboutInfo}>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
@@ -165,7 +166,8 @@ export default function Home() {
     'AI Assistant',
     'Object Detection',
     'IoT',
-    'Cisco Projects'
+    'Cisco Projects',
+    'UI/UX Design'
   ];
 
   const projects = [
@@ -244,13 +246,13 @@ export default function Home() {
               <div className={styles.aboutGrid}>
                 <div className={styles.aboutImageSection}>
                   <div className={styles.aboutImageFrame}>
-                    <img src="/images/profile.jpg" alt="Aldrian Loberiano" />
+                    <Image src="/images/profile.jpg" alt="Aldrian Loberiano" width={400} height={400} />
                   </div>
                 </div>
                 
                 <div className={styles.aboutTextSection}>
                   <p className={styles.aboutDescription}>
-                    Hi! I&apos;m a versatile IT professional specializing in full-stack development, system administration, and network engineering. I build end-to-end web solutions, maintain reliable IT infrastructure, and ensure seamless network operations. Passionate about AI and machine learning, I&apos;m expanding into computer vision technologies, exploring image processing, object detection, and deep learning models to create innovative digital solutions that enhance performance and security.
+                    Hi! I&apos;m a versatile IT professional specializing in full-stack development, system administration, network engineering, and UI/UX design. I build end-to-end web solutions, maintain reliable IT infrastructure, and ensure seamless network operations. Passionate about AI and machine learning, I&apos;m expanding into computer vision technologies, exploring image processing, object detection, and deep learning models while crafting intuitive user experiences to create innovative digital solutions that enhance performance and security.
                   </p>
                   
                   <div className={styles.aboutInfo}>

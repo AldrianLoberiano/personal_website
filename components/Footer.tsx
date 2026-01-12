@@ -20,7 +20,7 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h3 className={styles.footerTitle}>Aldrian Loberiano</h3>
             <p className={styles.footerDescription}>
-              Full-stack developer, system administrator, and network engineer with a passion for AI, machine learning, and computer vision. Building innovative solutions that bridge technology and creativity.
+              Full-stack developer, system administrator, network engineer, and UI/UX designer with a passion for AI, machine learning, and computer vision. Building innovative solutions that bridge technology and creativity.
             </p>
             <div className={styles.socialIcons}>
               <a href="https://www.facebook.com/its.adinggg" target="_blank" rel="noopener noreferrer" className={styles.socialIconLink}>
